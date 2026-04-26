@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For You ❤️</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom right, #ff9a9e, #fad0c4);
+  color: #fff;
+  text-align: center;
+}
+
+/* Sections */
+section {
+  padding: 60px 20px;
+}
+
+/* Hero */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+button {
+  padding: 12px 20px;
+  border: none;
+  background: white;
+  color: #ff4d6d;
+  font-size: 16px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* Gallery */
+.gallery img {
+  width: 200px;
+  margin: 10px;
+  border-radius: 15px;
+}
+
+/* Hidden message */
+.hidden {
+  display: none;
+}
+
+/* Cute animation */
+.fade {
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- HERO SECTION -->
+<section class="hero">
+  <h1>Helloooo Babygorlllll💖</h1>
+  <p>This is for you</p>
+  <button onclick="scrollToStory()">Our Story</button>
+</section>
+
+<!-- OUR STORY -->
+<section id="story">
+  <h2>Our Story 📖</h2>
+  <p>
+    It all started when we first met... <br>
+    It started in a maths tuition,just two people in the same batch, nothing special…or so we thought.
+
+
+We weren’t even that close at first. Then life did its thing. I moved to Bangalore, and somehow, you disappeared. Blocked. Two years. No explanation, just a random plot twist.
+
+And then…you came back.
+
+What started again as simple conversations slowly turned into something so much more. Friendship, comfort, and then love.Real, easy, effortless love.
+
+Now you are my favorite person. The one who shows up, walks me back safely in the rain, gives me flowers (even though you don't believe in them), writes me letters, and somehow makes every little moment feel special.
+
+From tuition classmates to best friends to this…
+yeah, didn’t see that coming, but I wouldn’t change a thing 🤍
+
+  </p>
+</section>
+
+<!-- REASONS I LOVE YOU -->
+<section>
+  <h2>Reasons I Love You❤️</h2>
+  <button onclick="showReason()">Click Me</button>
+  <p id="reason"></p>
+</section>
+
+<!-- PHOTO GALLERY -->
+<section class="gallery">
+  <h2>Our Memories 📸</h2>
+  <img src="photo1.jpg">
+  <img src="photo2.jpg">
+  <img src="photo3.jpg">
+  <img src="photo4.jpg">
+  <img src="photo5.jpg">
+</section>
+
+<!-- SURPRISE -->
+<section>
+  <h2>Surprise 🎁</h2>
+  <button onclick="showMessage()">Open</button>
+  <p id="secret" class="hidden fade">
+    You are my favorite person in the entire world ❤️
+  </p>
+</section>
+
+<!-- FINAL MESSAGE -->
+<section>
+  <h2>One Last Thing… 💌</h2>
+  <p>
+    Thank you for being you. <br>
+    I love you more than words can explain ❤️
+  </p>
+
+  <button onclick="valentine()">Will you be with me always?💕</button>
+  <p id="answer"></p>
+</section>
+
+<script>
+
+// Scroll
+function scrollToStory() {
+  document.getElementById("story").scrollIntoView({ behavior: "smooth" });
+}
+
+// Reasons list
+const reasons = [
+  "You make me smile no matter what 💕",
+  "You understand me like no one else",
+  "You are my comfort person ❤️",
+  "You make life more fun 😄",
+  "Because you're YOU"
+];
+
+function showReason() {
+  const random = reasons[Math.floor(Math.random() * reasons.length)];
+  document.getElementById("reason").innerHTML = random;
+}
+
+// Surprise
+function showMessage() {
+  document.getElementById("secret").style.display = "block";
+}
+
+// Valentine button
+function valentine() {
+  document.getElementById("answer").innerHTML =
+    "You think tor kache ar kong option ache??😌❤️";
+}
+
+</script>
+
+</body>
+</html>
